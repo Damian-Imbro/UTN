@@ -1,0 +1,14 @@
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\obj\Debug\net7.0\TP 0.5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\obj\Debug\net7.0\TP 0.5.AssemblyInfoInputs.cache
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\obj\Debug\net7.0\TP 0.5.AssemblyInfo.cs
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\obj\Debug\net7.0\TP 0.5.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\bin\Debug\net7.0\TP 0.5.exe
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\bin\Debug\net7.0\TP 0.5.deps.json
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\bin\Debug\net7.0\TP 0.5.runtimeconfig.json
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\bin\Debug\net7.0\TP 0.5.dll
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\bin\Debug\net7.0\TP 0.5.pdb
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\obj\Debug\net7.0\TP 0.5.dll
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\obj\Debug\net7.0\refint\TP 0.5.dll
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\obj\Debug\net7.0\TP 0.5.pdb
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\obj\Debug\net7.0\TP 0.5.genruntimeconfig.cache
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 0.5\TP 0.5\obj\Debug\net7.0\ref\TP 0.5.dll

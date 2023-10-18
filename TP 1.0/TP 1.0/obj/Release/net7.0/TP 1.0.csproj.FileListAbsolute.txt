@@ -1,0 +1,14 @@
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\bin\Release\net7.0\TP 1.0.exe
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\bin\Release\net7.0\TP 1.0.deps.json
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\bin\Release\net7.0\TP 1.0.runtimeconfig.json
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\bin\Release\net7.0\TP 1.0.dll
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\bin\Release\net7.0\TP 1.0.pdb
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\obj\Release\net7.0\TP 1.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\obj\Release\net7.0\TP 1.0.AssemblyInfoInputs.cache
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\obj\Release\net7.0\TP 1.0.AssemblyInfo.cs
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\obj\Release\net7.0\TP 1.0.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\obj\Release\net7.0\TP 1.0.dll
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\obj\Release\net7.0\refint\TP 1.0.dll
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\obj\Release\net7.0\TP 1.0.pdb
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\obj\Release\net7.0\TP 1.0.genruntimeconfig.cache
+C:\Users\Damian\Desktop\UTN - NEORIS\TP 1.0\TP 1.0\obj\Release\net7.0\ref\TP 1.0.dll
