@@ -9,9 +9,7 @@ namespace TP_2._0
         {
             Estacionamiento estacionamiento = new Estacionamiento();
             Menu();
-        
-
-
+      
         void Menu()
         {
             string opcion = "1";

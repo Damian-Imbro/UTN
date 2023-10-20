@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Damian\\Desktop\\UTN - NEORIS\\TP 2.1\\TP 2.0\\TP 2.1.csproj",
+      "projectUniqueName": "C:\\Users\\Damian\\Desktop\\.NET - UTN\\UTN\\TP 2.1\\TP 2.0\\TP 2.1.csproj",
       "projectName": "TP 2.1",
-      "projectPath": "C:\\Users\\Damian\\Desktop\\UTN - NEORIS\\TP 2.1\\TP 2.0\\TP 2.1.csproj",
+      "projectPath": "C:\\Users\\Damian\\Desktop\\.NET - UTN\\UTN\\TP 2.1\\TP 2.0\\TP 2.1.csproj",
       "packagesPath": "C:\\Users\\Damian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Damian\\Desktop\\UTN - NEORIS\\TP 2.1\\TP 2.0\\obj\\",
+      "outputPath": "C:\\Users\\Damian\\Desktop\\.NET - UTN\\UTN\\TP 2.1\\TP 2.0\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Damian\\AppData\\Roaming\\NuGet\\NuGet.Config",
