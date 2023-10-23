@@ -21,9 +21,16 @@ namespace TP_2._0
         public Estacionamiento()
         {
             tamañoParking = GenerarRandomTamañoParking();
+            
         }
 
-        
+        public void InicializarEstacionamientoEstatico()
+        {
+            for (int i = 0; i < largoEstacionamientoEstático; i++)
+            {
+                estacionamientoEstatico.Add(new Estacionamiento());
+            }
+        }
 
         private TamañoParking GenerarRandomTamañoParking()
         {
@@ -35,31 +42,26 @@ namespace TP_2._0
         public void AgregarVehiculo(Vehiculo vehiculo)
         {
             bool controlEstacionamiento = false;
-            int contador = 0;
-            if (contador < largoEstacionamientoEstático)
-            {
-                for (int i = 0; i < estacionamientoEstatico.Count; i++)//nunca entra en el for
-                {
-                    if (estacionamientoEstatico[i] == null)//si entra en el for genera una excepción
-                    {
-                        estacionamientoEstatico[i] = new Estacionamiento();
-                    }
+            
+            for (int i = 0; i < largoEstacionamientoEstático; i++)
+             {
+                controlEstacionamiento = false;
                     if (estacionamientoEstatico[i].vehiculo ==null && vehiculo.dueño.vip)
                     {
                         estacionamientoEstatico[i].vehiculo = vehiculo;
                         controlEstacionamiento = true;
                         break;
                     }
-                    if (estacionamientoEstatico[i].vehiculo == null && !vehiculo.dueño.vip && !estacionamientosVip.Contains(i))
+                    if (estacionamientoEstatico[i].vehiculo == null && !vehiculo.dueño.vip && !estacionamientosVip.Contains((i+1)))
                     {
                         estacionamientoEstatico[i].vehiculo = vehiculo;
                         controlEstacionamiento = true;
                         break;
                     }
 
-                }
-                contador++;
-            }
+             }
+                
+            
 
             if (!controlEstacionamiento)
             {
@@ -108,6 +110,7 @@ namespace TP_2._0
         }
         public void RemoverVehiculoPorMatricula(string matricula)
         {
+            matricula = matricula.ToUpper();
             for (int i = 0; i < estacionamientoEstatico.Count; i++)
             {
                 if (estacionamientoEstatico[i].vehiculo.matricula== matricula)
