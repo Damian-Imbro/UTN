@@ -111,14 +111,14 @@ namespace TP_2._0
         static void CatalogarNuevaVacuna(Sucursal sucursal)
         {
             Vacuna vacuna = new Vacuna();
-            sucursal.listaVacunas.Add(vacuna);
+            sucursal.listaMedicamentos.Add(vacuna);
             vacuna.MostrarInfo();
         }
 
         static void SintetizarVirus(Sucursal sucursal)
         {
             Virus virus = new Virus();
-            sucursal.listaVirus.Add(virus);
+            sucursal.listaMedicamentos.Add(virus);
             virus.MostrarInfo();
         }
 
@@ -132,11 +132,7 @@ namespace TP_2._0
                 Console.WriteLine("Ingrese el nombre del medicamento que desea eliminar");
                 string nombreMedicamento = Console.ReadLine();
                 nombreMedicamento = nombreMedicamento.ToLower();
-                medicamentoSeleccionado = sucursal.listaVacunas.Find(s => s.nombre == nombreMedicamento);
-                if (medicamentoSeleccionado == null)
-                {
-                    medicamentoSeleccionado = sucursal.listaVirus.Find(s => s.nombre == nombreMedicamento);
-                }
+                medicamentoSeleccionado = sucursal.listaMedicamentos.Find(s => s.nombre == nombreMedicamento);
             }
             medicamentoSeleccionado.EliminarMedicamento();
 
@@ -151,11 +147,7 @@ namespace TP_2._0
             }
             string respuesta=Console.ReadLine();
             Enum.TryParse<DesignacionMedicamento>(respuesta, out DesignacionMedicamento tipoAEliminar);
-            foreach (Medicamento medicamento in sucursal.listaVacunas)
-            {
-                if (medicamento.designacion == tipoAEliminar) { medicamento.EliminarMedicamento(); }
-            }
-            foreach (Medicamento medicamento in sucursal.listaVirus)
+            foreach (Medicamento medicamento in sucursal.listaMedicamentos)
             {
                 if (medicamento.designacion == tipoAEliminar) { medicamento.EliminarMedicamento(); }
             }
@@ -163,13 +155,9 @@ namespace TP_2._0
 
         static void ActivarSistemaAutodestruccion(Sucursal sucursal)
         {
-            foreach (Medicamento medicamento in sucursal.listaVacunas)
+            foreach (Medicamento medicamento in sucursal.listaMedicamentos)
             {
                medicamento.EliminarMedicamento();
-            }
-            foreach (Medicamento medicamento in sucursal.listaVirus)
-            {
-                medicamento.EliminarMedicamento();
             }
         }
 

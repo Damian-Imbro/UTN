@@ -9,14 +9,12 @@ namespace TP_2._0
     internal class Sucursal
     {
         public string codigo;
-        public List<Vacuna> listaVacunas;
-        public List<Virus> listaVirus;
-
+        public List<Medicamento> listaMedicamentos;
+       
         public Sucursal()
         {
             codigo = GenerarCodigoAleatorio();
-            listaVacunas = new List<Vacuna>();
-            listaVirus = new List<Virus>();
+            listaMedicamentos = new List<Medicamento>();
         }
 
         private string GenerarCodigoAleatorio()
@@ -33,25 +31,17 @@ namespace TP_2._0
         }
         public void ListarTodosMedicamentos()
         {
-            for (int i = 0;i < listaVacunas.Count; i++)
+            foreach (Medicamento m in listaMedicamentos)
             {
-                listaVacunas[i].MostrarInfo();
-            }
-            for (int i = 0; i < listaVirus.Count; i++)
-            {
-                listaVirus[i].MostrarInfo();
+                m.MostrarInfo();
             }
         }
 
         internal void ListarMedicamentosActivos()
         {
-            for (int i = 0; i < listaVacunas.Count; i++)
+            foreach (Medicamento m in listaMedicamentos)
             {
-                if(listaVacunas[i].nombre!="XXX") listaVacunas[i].MostrarInfo();
-            }
-            for (int i = 0; i < listaVirus.Count; i++)
-            {
-                if (listaVirus[i].nombre != "YYY")  listaVirus[i].MostrarInfo();
+                if (m.nombre != "XXX" && m.nombre != "YYY") m.MostrarInfo();
             }
         }
     }
