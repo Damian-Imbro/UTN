@@ -1,0 +1,14 @@
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\TP integrador.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\TP integrador.AssemblyInfoInputs.cache
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\TP integrador.AssemblyInfo.cs
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\TP integrador.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\bin\Debug\net7.0\TP integrador.exe
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\bin\Debug\net7.0\TP integrador.deps.json
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\bin\Debug\net7.0\TP integrador.runtimeconfig.json
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\bin\Debug\net7.0\TP integrador.dll
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\bin\Debug\net7.0\TP integrador.pdb
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\TP integrador.dll
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\refint\TP integrador.dll
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\TP integrador.pdb
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\TP integrador.genruntimeconfig.cache
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\ref\TP integrador.dll
