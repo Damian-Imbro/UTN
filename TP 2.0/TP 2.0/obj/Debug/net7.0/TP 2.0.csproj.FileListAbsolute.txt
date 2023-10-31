@@ -1,0 +1,14 @@
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\bin\Debug\net7.0\TP 2.0.exe
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\bin\Debug\net7.0\TP 2.0.deps.json
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\bin\Debug\net7.0\TP 2.0.runtimeconfig.json
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\bin\Debug\net7.0\TP 2.0.dll
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\bin\Debug\net7.0\TP 2.0.pdb
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\obj\Debug\net7.0\TP 2.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\obj\Debug\net7.0\TP 2.0.AssemblyInfoInputs.cache
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\obj\Debug\net7.0\TP 2.0.AssemblyInfo.cs
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\obj\Debug\net7.0\TP 2.0.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\obj\Debug\net7.0\TP 2.0.dll
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\obj\Debug\net7.0\refint\TP 2.0.dll
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\obj\Debug\net7.0\TP 2.0.pdb
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\obj\Debug\net7.0\TP 2.0.genruntimeconfig.cache
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP 2.0\TP 2.0\obj\Debug\net7.0\ref\TP 2.0.dll
