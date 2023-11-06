@@ -10,15 +10,15 @@ namespace TP_integrador
     internal abstract class Operador
     {
         public string id;
-        public int bateria;
+        public Bateria bateria;
         public EstadoOperador estado;
         public double cargaMaxima;
         public double cargaActual;
         public double velocidadOptima;
         public string localizacionActual;
-        private int field;
+        
 
-        public Operador(int bateria, EstadoOperador estado, double cargaMaxima, double velocidadOptima, string localizacionActual)
+        public Operador(Bateria bateria, EstadoOperador estado, double cargaMaxima, double velocidadOptima, string localizacionActual)
         {
             this.id = RandomId();
             this.bateria = bateria;
@@ -57,7 +57,7 @@ namespace TP_integrador
             double tiempoDeMovimientoHoras = distanciaEnKilometros / velocidadActual;
             double consumoDeBateria = (tiempoDeMovimientoHoras) * 1000;
             int consumoDeBateriaActual = (int)(tiempoDeMovimientoHoras * 1000);
-            if (consumoDeBateriaActual > bateria)
+            if (consumoDeBateriaActual > bateria.mAh)
             {
                 Console.WriteLine($"Advertencia: No hay suficiente batería para moverse a {nuevaLocalizacion}");
                 return;
@@ -65,8 +65,8 @@ namespace TP_integrador
             if (ComprobarBateriaParaAvanzarOVolverAlCuertel(nuevaLocalizacion)) {return;}
             estado = EstadoOperador.EnMovimiento;
             localizacionActual = nuevaLocalizacion;
-            bateria -= consumoDeBateriaActual;
-            Console.WriteLine($"Se ha movido a {nuevaLocalizacion} en {distanciaEnKilometros} km. Batería restante {bateria}");
+            bateria.mAh -= consumoDeBateriaActual;
+            Console.WriteLine($"Se ha movido a {nuevaLocalizacion} en {distanciaEnKilometros} km. Batería restante {bateria.mAh}");
             estado = EstadoOperador.EsperandoOrdenes;
         }
 
@@ -103,7 +103,7 @@ namespace TP_integrador
 
         public void ImprimerReporteGeneral()
         {
-            Console.WriteLine($"ID: {id}\n Bateria: {bateria}\n Estado: {estado}\n Carga actual: {cargaActual}\n Localización: {localizacionActual}");
+            Console.WriteLine($"ID: {id}\n Bateria: {bateria.mAh}\n Estado: {estado}\n Carga actual: {cargaActual}\n Localización: {localizacionActual}");
         }
 
         public abstract void VolverCuartelCargarBateria();
@@ -116,8 +116,8 @@ namespace TP_integrador
             double consumoDeBateria = (distanciaAlCuertel / velocidadActual) * 1000;
             double tiempoDeMovimientoHoras = distanciaAlCuertel / velocidadActual;
             int consumoDeBateriaActual = (int)(tiempoDeMovimientoHoras * 1000);
-            if (consumoDeBateriaActual > bateria) { Console.WriteLine("No se recomienda avanzar, regresar a la base a recargar bateria");}
-            return consumoDeBateriaActual > bateria;
+            if (consumoDeBateriaActual > bateria.mAh) { Console.WriteLine("No se recomienda avanzar, regresar a la base a recargar bateria");}
+            return consumoDeBateriaActual > bateria.mAh;
         }
 
     }

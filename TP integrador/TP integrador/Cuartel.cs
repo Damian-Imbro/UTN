@@ -9,8 +9,14 @@ namespace TP_integrador
     internal class Cuartel
     {
         public List<Operador> listaOperadores = new List<Operador>();
+        int filaMapa;
+        int columnaMapa;
 
-        public Cuartel() { }
+        public Cuartel(int filaMapa, int columnaMapa)
+        {
+            this.filaMapa = filaMapa;
+            this.columnaMapa = columnaMapa;
+        }
 
         public void ListarTodosLosOperadores()
         {
