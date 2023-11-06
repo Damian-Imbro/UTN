@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TP_integrador
 {
-    internal class Localizacion
+    internal abstract class Localizacion
     {
-        public Localizaciones localizacion;
-        public Localizacion()
+        public string nombre;
+        public string descripcion;
+        public Localizacion(string nombre, string descripcion)
         {
-            Random random = new Random();
-            Array localizaciones = Enum.GetValues(typeof(Localizaciones));
-            localizacion = (Localizaciones)localizaciones.GetValue(random.Next(localizaciones.Length));
+            this.nombre = nombre;
+            this.descripcion = descripcion;
         }
-        public Localizacion(Localizaciones localizacion)
-        {
-            this.localizacion = localizacion;
-        }
+
     }
 }
 

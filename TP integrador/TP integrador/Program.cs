@@ -13,7 +13,7 @@ namespace TP_integrador
             {
                 for (int columna = 0; columna < columnasMapa; columna++)
                 {
-                    string localizacion=Convert.ToString(mapa.mapa[fila, columna].localizacion);
+                    string localizacion = Convert.ToString( mapa.mapa[fila, columna].nombre);
                     Console.Write("["+localizacion.Substring(0,4)+"]");
                 }
                 Console.WriteLine();
