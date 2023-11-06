@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" modified="2023-11-03T13:04:35.056Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="5kVlzXo5SoNcp2JoLUV0" version="21.6.9" type="github">
+  <diagram name="Página-1" id="F7THdYopQ8nA-PjgvmwJ">
+    <mxGraphModel dx="880" dy="434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tubyd1azlQdlaODOP2Rr-1" value="Progam" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="245" y="10" width="270" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-2" value="+ sucursales: List&amp;lt;sucursal&amp;gt;&lt;br&gt;+ cantidadDeSucursales: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="tubyd1azlQdlaODOP2Rr-1" vertex="1">
+          <mxGeometry y="26" width="270" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="tubyd1azlQdlaODOP2Rr-1" vertex="1">
+          <mxGeometry y="70" width="270" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-4" value="- MenuGeneral()&lt;br&gt;-CargarSucursales()&lt;br&gt;-SeleccionarSucursal()&lt;br&gt;-MenuSucursal()&lt;br&gt;-ActivarSistemaDeAutodestruccion(Sucursal)&lt;br&gt;-ActivarSistemaDeAutodestruccionGlobal()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="tubyd1azlQdlaODOP2Rr-1" vertex="1">
+          <mxGeometry y="80" width="270" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="S-jUu82SMCv6c_-CMgce-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.991;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="tubyd1azlQdlaODOP2Rr-5" target="tubyd1azlQdlaODOP2Rr-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-5" value="Sucursal" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="240" width="240" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-6" value="+ codigo: string&lt;br&gt;+ ListaMedicamentos: List&amp;lt;Medicamento&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="tubyd1azlQdlaODOP2Rr-5" vertex="1">
+          <mxGeometry y="26" width="240" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="tubyd1azlQdlaODOP2Rr-5" vertex="1">
+          <mxGeometry y="70" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-8" value="- GenerarCodigoAleatorio()&lt;br&gt;+ListarTodosLosMedicamentos()&lt;br&gt;+ListarMEdicamentosActivos()&lt;br&gt;+CatalogarNuevaVacuna()&lt;br&gt;+SintetizarVirus()&lt;br&gt;+DestruirMedicamento()&lt;br&gt;+DestruirPoTipo()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="tubyd1azlQdlaODOP2Rr-5" vertex="1">
+          <mxGeometry y="78" width="240" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="S-jUu82SMCv6c_-CMgce-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.521;entryY=0.991;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="tubyd1azlQdlaODOP2Rr-10" target="tubyd1azlQdlaODOP2Rr-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-10" value="Abstract&lt;br&gt;&amp;nbsp;Medicamento" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="230" y="480" width="310" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-11" value="- nombre: string&lt;br&gt;-identificadoUnico: string&lt;br&gt;-designacion: DesiganacionMedicamento" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="tubyd1azlQdlaODOP2Rr-10" vertex="1">
+          <mxGeometry y="40" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="tubyd1azlQdlaODOP2Rr-10" vertex="1">
+          <mxGeometry y="100" width="310" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-13" value="- RandomDesignacion(): DesignacionMEdicamento&lt;br&gt;- RandomUID(): string&lt;br&gt;- RandomNombre(): string&lt;br&gt;+MostrarInfo()&lt;br&gt;+EliminarMedicamento()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="tubyd1azlQdlaODOP2Rr-10" vertex="1">
+          <mxGeometry y="108" width="310" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="S-jUu82SMCv6c_-CMgce-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.487;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=0;" edge="1" parent="1" source="tubyd1azlQdlaODOP2Rr-14" target="tubyd1azlQdlaODOP2Rr-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-14" value="Virus" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="105" y="740" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="tubyd1azlQdlaODOP2Rr-14" vertex="1">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-17" value="+EliminarMEdiacemento()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="tubyd1azlQdlaODOP2Rr-14" vertex="1">
+          <mxGeometry y="34" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="S-jUu82SMCv6c_-CMgce-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.484;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=block;endFill=0;" edge="1" parent="1" source="tubyd1azlQdlaODOP2Rr-18" target="tubyd1azlQdlaODOP2Rr-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-18" value="Vacuna" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="495" y="740" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-20" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="tubyd1azlQdlaODOP2Rr-18" vertex="1">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="tubyd1azlQdlaODOP2Rr-21" value="+EliminarMedicamento()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="tubyd1azlQdlaODOP2Rr-18" vertex="1">
+          <mxGeometry y="34" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="S-jUu82SMCv6c_-CMgce-1" value="Enum&lt;br&gt;DesignacionMedicamento" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="480" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="S-jUu82SMCv6c_-CMgce-2" value="ALFA&lt;br&gt;BETA&lt;br&gt;GAMA&lt;br&gt;EPSILON&lt;br&gt;OMEGA&lt;br&gt;TAU" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="S-jUu82SMCv6c_-CMgce-1">
+          <mxGeometry y="40" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="S-jUu82SMCv6c_-CMgce-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.025;entryY=0.273;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tubyd1azlQdlaODOP2Rr-11" target="S-jUu82SMCv6c_-CMgce-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
