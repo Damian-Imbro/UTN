@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TP_integrador
 {
-    internal abstract class Operador
+    public abstract class Operador
     {
         public string id;
         public Bateria bateria;
@@ -15,22 +15,23 @@ namespace TP_integrador
         public double cargaMaxima;
         public double cargaActual;
         public double velocidadOptima;
-        public string localizacionActual;
+        public int[] coordenadasEnElMapa;
         
 
-        public Operador(Bateria bateria, EstadoOperador estado, double cargaMaxima, double velocidadOptima, string localizacionActual)
+        public Operador(Bateria bateria, double cargaMaxima, double velocidadOptima)
         {
             this.id = RandomId();
             this.bateria = bateria;
-            this.estado = estado;
+            estado = EstadoOperador.GuardadoEnCuartel;
             this.cargaMaxima = cargaMaxima;
             this.velocidadOptima = velocidadOptima;
-            this.localizacionActual = localizacionActual;
+            coordenadasEnElMapa[0] = Cuartel.filaMapa;
+            coordenadasEnElMapa[1] = Cuartel.columnaMapa;
             cargaActual = 0;
         }
         
 
-        private string RandomId()
+        public string RandomId()
         {
             Type tipoOperador = this.GetType();
             string tipoNombre = tipoOperador.Name;
@@ -49,34 +50,39 @@ namespace TP_integrador
         }
 
 
-        public void Moverse(string nuevaLocalizacion)
+        public void Moverse(int[] nuevasCoordenadas)
         {
             Random random = new Random();
-            int distanciaEnKilometros = random.Next(1, 200);
+            int distanciaEnKilometros = CalcularDistancia(nuevasCoordenadas);
             double velocidadActual = velocidadOptima * (1 - (cargaActual / cargaMaxima) / 2);
             double tiempoDeMovimientoHoras = distanciaEnKilometros / velocidadActual;
             double consumoDeBateria = (tiempoDeMovimientoHoras) * 1000;
             int consumoDeBateriaActual = (int)(tiempoDeMovimientoHoras * 1000);
             if (consumoDeBateriaActual > bateria.mAh)
             {
-                Console.WriteLine($"Advertencia: No hay suficiente batería para moverse a {nuevaLocalizacion}");
+                Console.WriteLine($"Advertencia: No hay suficiente batería para moverse hasta las coordenadas {nuevasCoordenadas[0]} - {nuevasCoordenadas[1]}" );
                 return;
             }
-            if (ComprobarBateriaParaAvanzarOVolverAlCuertel(nuevaLocalizacion)) {return;}
+            //if (ComprobarBateriaParaAvanzarOVolverAlCuertel(nuevasCoordenadas)) {return;}
             estado = EstadoOperador.EnMovimiento;
-            localizacionActual = nuevaLocalizacion;
+            coordenadasEnElMapa[0] = nuevasCoordenadas[0];
+            coordenadasEnElMapa[1] = nuevasCoordenadas[1];
             bateria.mAh -= consumoDeBateriaActual;
-            Console.WriteLine($"Se ha movido a {nuevaLocalizacion} en {distanciaEnKilometros} km. Batería restante {bateria.mAh}");
+            Console.WriteLine($"Se ha movido a las coordenadas {nuevasCoordenadas[0]} - {nuevasCoordenadas[1]} en {distanciaEnKilometros} km. Batería restante {bateria.mAh}");
             estado = EstadoOperador.EsperandoOrdenes;
         }
 
-
-
+        public int CalcularDistancia(int[] nuevasCoordenadas)
+        {
+            int distancia = 0;
+            //Calcula la distancia hasta unas coordenadas en específico
+            return distancia;
+        }
 
         public void TransferirCargaFisica (Operador operadorDestino, int kilos)
         {   //Falta realizar la comprobación de la carga máxima del operador destino
             //y si el operador de origen tiene ca cantidad de carga que se quiere pasar como minimo
-            if (localizacionActual.Equals(operadorDestino.localizacionActual))
+            if (coordenadasEnElMapa==operadorDestino.coordenadasEnElMapa)
             {
                 estado = EstadoOperador.TranfiriendoCarga;
                 operadorDestino.estado = EstadoOperador.TranfiriendoCarga;
@@ -95,23 +101,26 @@ namespace TP_integrador
         }
         public void VolverCuartelTranferirCarga()
         {
-            localizacionActual = "Cuartel";
+            //falta controlar si tiene suficiente energía para volver
+            coordenadasEnElMapa[0] = Cuartel.filaMapa;
+            coordenadasEnElMapa[1] = Cuartel.columnaMapa;
             cargaActual = 0;
-            Console.WriteLine($"El operador {id} se encuentra en {localizacionActual} y su carga actual es {cargaActual}");
+            Console.WriteLine($"El operador {id} se encuentra en las coordenadas {coordenadasEnElMapa[0]} - {coordenadasEnElMapa[1]} y su carga actual es {cargaActual}");
             estado = EstadoOperador.GuardadoEnCuartel;
         }
 
         public void ImprimerReporteGeneral()
         {
-            Console.WriteLine($"ID: {id}\n Bateria: {bateria.mAh}\n Estado: {estado}\n Carga actual: {cargaActual}\n Localización: {localizacionActual}");
+            Console.WriteLine($"ID: {id}\n Bateria: {bateria.mAh}\n Estado: {estado}\n Carga actual: {cargaActual}\n Localización: {coordenadasEnElMapa[0]} - {coordenadasEnElMapa[1]}");
         }
 
         public abstract void VolverCuartelCargarBateria();
         //Habría que ver la manera de que controle la bateria restante para volver al cuartel
 
-        public bool ComprobarBateriaParaAvanzarOVolverAlCuertel(String destino)
+        public bool ComprobarBateriaParaAvanzarOVolverAlCuertel(int[] nuevasCoordenadas)
         {
-            int distanciaAlCuertel = 50; //por el momento es un número fijo hasta que se pueda calcular la distante entre la localización dde destino y el cuartel
+            int[] coordenadasCuartel = { Cuartel.filaMapa, Cuartel.columnaMapa };
+            int distanciaAlCuertel = CalcularDistancia(coordenadasCuartel);
             double velocidadActual = velocidadOptima * (1 - (cargaActual / cargaMaxima) / 2);
             double consumoDeBateria = (distanciaAlCuertel / velocidadActual) * 1000;
             double tiempoDeMovimientoHoras = distanciaAlCuertel / velocidadActual;

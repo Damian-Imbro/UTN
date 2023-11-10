@@ -10,8 +10,5 @@
             this.mAh = mAh;
             cargaActual = mAh;
         }
-
     }
-
-    
 }

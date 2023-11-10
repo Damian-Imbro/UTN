@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_integrador
 {
-    internal class Vertedero : Localizacion
+    public class Vertedero : Localizacion
     {
         public Vertedero() : base("Vertedero", "Sector lleno de basura, al pasar hay una chance de 5% de dañar\r\ncomponentes del Operador")
         {

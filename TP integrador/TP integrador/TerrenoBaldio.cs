@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_integrador
 {
-    internal class TerrenoBaldio : Localizacion
+    public class TerrenoBaldio : Localizacion
     {
         public TerrenoBaldio() : base("Terreno baldío", "Terrenos comunes sin efectos")
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_integrador
 {
-    internal class VertederoElectronico : Localizacion
+    public class VertederoElectronico : Localizacion
     {
         public VertederoElectronico() : base("Vertedero electrónico", "Un sector lleno de basura electrónica, no tiene chance de causar daño físico al operador pero las ondas electromagnéticas de los dispositivos dañan las baterías y reducen su capacidad máxima en un 20% permanentemente")
         {

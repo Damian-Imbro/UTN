@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TP_integrador
+﻿namespace TP_integrador
 {
-    internal class Cuartel:Localizacion
+    public class Cuartel:Localizacion
     {
         public List<Operador> listaOperadores = new List<Operador>();
-        int filaMapa;
-        int columnaMapa;
+        public static int filaMapa;
+        public static int columnaMapa;
+
+        
 
         public Cuartel(int filaMapa, int columnaMapa):base("Cuartel", "Un punto de control donde los operadores pueden recargar batería o ser reparados. Pueden existir varios, pero nunca más de 3.")
         {
-            this.filaMapa = filaMapa;
-            this.columnaMapa = columnaMapa;
+            filaMapa = Cuartel.filaMapa;
+            columnaMapa = Cuartel.columnaMapa;
         }
 
         public void ListarTodosLosOperadores()
@@ -26,33 +22,32 @@ namespace TP_integrador
             }
         }
 
-        public void ListarOperadoresEnUnaLocalizacion(string localizacion)
+        public void ListarOperadoresEnUnaLocalizacion(int[] coordenadas)
         {
             int contador = 0;
             foreach (Operador operador in listaOperadores)
             {
-                if (operador.localizacionActual.Equals(localizacion))
+                if (operador.coordenadasEnElMapa==coordenadas)
                 {
                     operador.ImprimerReporteGeneral();
                     contador++;
                 }
             }
-            if (contador == 0) { Console.WriteLine($"No hay ningún operador en {localizacion}");}
+            if (contador == 0) { Console.WriteLine($"No hay ningún operador en las coordenadas {coordenadas[0]} - {coordenadas[1]}");}
         }
 
         public void VolverTodosAlCuertel()
         {
             foreach (Operador operador in listaOperadores)
             {
-                if (!operador.localizacionActual.Equals("Cuartel")){operador.Moverse("Cuartel");}
+                int[] coordenadasCuertel = { Cuartel.filaMapa, Cuartel.columnaMapa };
+                if (!(operador.coordenadasEnElMapa==coordenadasCuertel)) {operador.Moverse(coordenadasCuertel);}
             }
         }
 
-        public void enviarOperador(Operador operador, String localizacion)
+        public void enviarOperador(Operador operador, int[] coordenadas)
         {
-            operador.Moverse(localizacion);
+            operador.Moverse(coordenadas);
         }
-
-
     }
 }

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace TP_integrador
 {
-    internal class M8:Operador
+    public class M8:Operador
     {
-        public M8 (EstadoOperador estado = EstadoOperador.GuardadoEnCuartel, double cargaMaxima = 250, double velocidadOptima = 5, string localizacionActual = "Cuartel")
-        : base(new Bateria(12250), estado, cargaMaxima, velocidadOptima, localizacionActual)
+        
+
+        public M8 (double cargaMaxima = 250, double velocidadOptima = 5)
+        : base(new Bateria(12250), cargaMaxima, velocidadOptima )
         {
            
         }
@@ -17,9 +19,11 @@ namespace TP_integrador
         public override void VolverCuartelCargarBateria()
         {
             bateria.mAh = 12250;
-            localizacionActual = "Cuartel";
+            int[] coordenadasCuartel;
+            coordenadasEnElMapa[0] = Cuartel.filaMapa;
+            coordenadasEnElMapa[1] = Cuartel.columnaMapa;
             estado = EstadoOperador.GuardadoEnCuartel;
-            Console.WriteLine($"El operador {id} se encuentra en {localizacionActual} y su carga de bateria actual es {bateria}");
+            Console.WriteLine($"El operador {id} se encuentra en las coordenadas {coordenadasEnElMapa[0]} - {coordenadasEnElMapa[1]} y su carga de bateria actual es {bateria}");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_integrador
 {
-    internal class Lago : Localizacion
+    public class Lago : Localizacion
     {
         public Lago() : base("Lago", "Un sector inundado, las unidades K9 y M8 no pueden pasar")
         {

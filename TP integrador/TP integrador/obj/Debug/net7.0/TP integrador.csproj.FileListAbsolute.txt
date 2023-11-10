@@ -12,3 +12,6 @@ C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net
 C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\TP integrador.pdb
 C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\TP integrador.genruntimeconfig.cache
 C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\ref\TP integrador.dll
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\TP integrador.csproj.AssemblyReference.cache
+C:\Users\Damian\Desktop\.NET - UTN\UTN\TP integrador\TP integrador\obj\Debug\net7.0\TP integrador.csproj.CopyComplete

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
+
 
 namespace TP_integrador
 {
-    internal class Mapa
+    [Serializable]
+    public class Mapa
     {
         public Localizacion[,] mapa;
         public Cuartel cuartelGeneral;
@@ -19,8 +15,11 @@ namespace TP_integrador
             ObtenerClasesDerivadas();
             CompletarMapa(filas, columnas);
         }
+        public Mapa()
+        {
+        }
 
-        private void ObtenerClasesDerivadas()
+        public void ObtenerClasesDerivadas()
         {
             tiposDeLocalizacion = Assembly.GetExecutingAssembly()
             .GetTypes()
@@ -28,7 +27,7 @@ namespace TP_integrador
             .ToList();
         }
 
-        private void CompletarMapa(int filas, int columnas)
+        public void CompletarMapa(int filas, int columnas)
         {
             mapa = new Localizacion[filas, columnas];
             RandomCrearCuartel(filas, columnas);
@@ -41,7 +40,7 @@ namespace TP_integrador
             }
         }
 
-        private void RandomCrearLocacion(int fila, int columna)
+        public void RandomCrearLocacion(int fila, int columna)
         {
             Random random = new Random();
             var tiposFiltrados = tiposDeLocalizacion.Where(t => t != typeof(Cuartel)).ToList();
@@ -60,7 +59,7 @@ namespace TP_integrador
             }
         }
 
-        private int CantidadDeLocalizacionesEnMapa(Type tipoLocalizacion)
+        public int CantidadDeLocalizacionesEnMapa(Type tipoLocalizacion)
         {
             int contador = 0;
             foreach (Localizacion localizacion in mapa)
@@ -75,7 +74,7 @@ namespace TP_integrador
 
 
 
-        private void RandomCrearCuartel(int filas, int columnas)
+        public void RandomCrearCuartel(int filas, int columnas)
         {
             Random random = new Random();
             Localizacion localizacionCuartel;
@@ -91,7 +90,17 @@ namespace TP_integrador
             cuartelGeneral = new Cuartel(cuartelFila, cuartelColumna);
         }
 
-        
+        public int[] coordenadasDelCuartel()
+        {
+            int[] coordenadasCuartel = new int[2];
+            coordenadasCuartel[0] = Cuartel.filaMapa;
+            coordenadasCuartel[1] = Cuartel.columnaMapa;
+            return coordenadasCuartel;
+
+        }
+
+
+       
     }
 }
 
