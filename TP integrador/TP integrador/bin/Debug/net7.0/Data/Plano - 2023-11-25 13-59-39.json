@@ -1,0 +1,88 @@
+{
+  "$type": "TP_integrador.Plano, TP integrador",
+  "Mapa": {
+    "$type": "TP_integrador.Localizaciones.Localizacion[,], TP integrador",
+    "$values": [
+      [
+        {
+          "$type": "TP_integrador.Localizaciones.TerrenoBaldio, TP integrador",
+          "nombre": "Terreno baldío",
+          "descripcion": "Terrenos comunes sin efectos"
+        },
+        {
+          "$type": "TP_integrador.Localizaciones.Cuartel, TP integrador",
+          "nombre": "Cuartel",
+          "descripcion": "Un punto de control donde los operadores pueden recargar batería o ser reparados. Pueden existir varios, pero nunca más de 3.",
+          "ListaOperadores": {
+            "$type": "System.Collections.Generic.List`1[[TP_integrador.Operadores.Operador, TP integrador]], System.Private.CoreLib",
+            "$values": []
+          }
+        }
+      ],
+      [
+        {
+          "$type": "TP_integrador.Localizaciones.TerrenoBaldio, TP integrador",
+          "nombre": "Terreno baldío",
+          "descripcion": "Terrenos comunes sin efectos"
+        },
+        {
+          "$type": "TP_integrador.Localizaciones.SitioDeReciclaje, TP integrador",
+          "nombre": "Sitio de reciclaje",
+          "descripcion": "Un sector dedicado a transformar basura en recursos útiles. Estos sitios poseen puntos de recarga para los operadores pero no de mantenimiento"
+        }
+      ]
+    ]
+  },
+  "CuartelGeneral": {
+    "$type": "TP_integrador.Localizaciones.Cuartel, TP integrador",
+    "nombre": "Cuartel",
+    "descripcion": "Un punto de control donde los operadores pueden recargar batería o ser reparados. Pueden existir varios, pero nunca más de 3.",
+    "ListaOperadores": {
+      "$type": "System.Collections.Generic.List`1[[TP_integrador.Operadores.Operador, TP integrador]], System.Private.CoreLib",
+      "$values": [
+        {
+          "$type": "TP_integrador.Operadores.K9, TP integrador",
+          "CargaMaxima": 40.0,
+          "VelocidadOptima": 20.0,
+          "Id": "K9-1VO3tAzs0I",
+          "Batery": null,
+          "Estado": 0,
+          "CargaActual": 0.0,
+          "CoordenadasEnElMapa": {
+            "$type": "System.Tuple`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib",
+            "Item1": 0,
+            "Item2": 1
+          }
+        },
+        {
+          "$type": "TP_integrador.Operadores.M8, TP integrador",
+          "CargaMaxima": 250.0,
+          "VelocidadOptima": 5.0,
+          "Id": "M8-45ngBjtDi0",
+          "Batery": null,
+          "Estado": 0,
+          "CargaActual": 0.0,
+          "CoordenadasEnElMapa": {
+            "$type": "System.Tuple`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]], System.Private.CoreLib",
+            "Item1": 0,
+            "Item2": 0
+          }
+        }
+      ]
+    }
+  },
+  "TiposDeLocalizacion": {
+    "$type": "System.Collections.Generic.List`1[[System.Type, System.Private.CoreLib]], System.Private.CoreLib",
+    "$values": [
+      "TP_integrador.Localizaciones.Bosque, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Cuartel, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Lago, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Planicie, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.SectorUrbano, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.SitioDeReciclaje, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.TerrenoBaldio, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Vertedero, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.VertederoElectronico, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  }
+}

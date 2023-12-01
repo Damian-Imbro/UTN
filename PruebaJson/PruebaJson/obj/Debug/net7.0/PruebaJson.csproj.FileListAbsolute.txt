@@ -1,0 +1,14 @@
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\bin\Debug\net7.0\PruebaJson.exe
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\bin\Debug\net7.0\PruebaJson.deps.json
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\bin\Debug\net7.0\PruebaJson.runtimeconfig.json
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\bin\Debug\net7.0\PruebaJson.dll
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\bin\Debug\net7.0\PruebaJson.pdb
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\obj\Debug\net7.0\PruebaJson.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\obj\Debug\net7.0\PruebaJson.AssemblyInfoInputs.cache
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\obj\Debug\net7.0\PruebaJson.AssemblyInfo.cs
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\obj\Debug\net7.0\PruebaJson.csproj.CoreCompileInputs.cache
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\obj\Debug\net7.0\PruebaJson.dll
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\obj\Debug\net7.0\refint\PruebaJson.dll
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\obj\Debug\net7.0\PruebaJson.pdb
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\obj\Debug\net7.0\PruebaJson.genruntimeconfig.cache
+C:\Users\Damian\Desktop\.NET - UTN\UTN\PruebaJson\PruebaJson\obj\Debug\net7.0\ref\PruebaJson.dll

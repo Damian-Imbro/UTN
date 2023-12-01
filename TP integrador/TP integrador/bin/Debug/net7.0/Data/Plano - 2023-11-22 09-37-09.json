@@ -1,0 +1,46 @@
+{
+  "$type": "TP_integrador.Plano, TP integrador",
+  "Mapa": {
+    "$type": "TP_integrador.Localizaciones.Localizacion[,], TP integrador",
+    "$values": [
+      [
+        {
+          "$type": "TP_integrador.Localizaciones.Bosque, TP integrador",
+          "nombre": "Bosque",
+          "descripcion": "Terrenos comunes sin efectos"
+        },
+        {
+          "$type": "TP_integrador.Localizaciones.Cuartel, TP integrador",
+          "nombre": "Cuartel",
+          "descripcion": "Un punto de control donde los operadores pueden recargar batería o ser reparados. Pueden existir varios, pero nunca más de 3."
+        }
+      ],
+      [
+        {
+          "$type": "TP_integrador.Localizaciones.VertederoElectronico, TP integrador",
+          "nombre": "Vertedero electrónico",
+          "descripcion": "Un sector lleno de basura electrónica, no tiene chance de causar daño físico al operador pero las ondas electromagnéticas de los dispositivos dañan las baterías y reducen su capacidad máxima en un 20% permanentemente"
+        },
+        {
+          "$type": "TP_integrador.Localizaciones.Vertedero, TP integrador",
+          "nombre": "Vertedero",
+          "descripcion": "Sector lleno de basura, al pasar hay una chance de 5% de dañar\r\ncomponentes del Operador"
+        }
+      ]
+    ]
+  },
+  "TiposDeLocalizacion": {
+    "$type": "System.Collections.Generic.List`1[[System.Type, System.Private.CoreLib]], System.Private.CoreLib",
+    "$values": [
+      "TP_integrador.Localizaciones.Bosque, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Cuartel, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Lago, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Planicie, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.SectorUrbano, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.SitioDeReciclaje, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.TerrenoBaldio, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Vertedero, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.VertederoElectronico, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  }
+}

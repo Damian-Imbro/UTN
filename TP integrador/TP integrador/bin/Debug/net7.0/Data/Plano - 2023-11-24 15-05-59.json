@@ -1,0 +1,26 @@
+{
+  "$type": "TP_integrador.Plano, TP integrador",
+  "CuartelGeneral": {
+    "$type": "TP_integrador.Localizaciones.Cuartel, TP integrador",
+    "nombre": "Cuartel",
+    "descripcion": "Un punto de control donde los operadores pueden recargar batería o ser reparados. Pueden existir varios, pero nunca más de 3.",
+    "ListaOperadores": {
+      "$type": "System.Collections.Generic.List`1[[TP_integrador.Operadores.Operador, TP integrador]], System.Private.CoreLib",
+      "$values": []
+    }
+  },
+  "TiposDeLocalizacion": {
+    "$type": "System.Collections.Generic.List`1[[System.Type, System.Private.CoreLib]], System.Private.CoreLib",
+    "$values": [
+      "TP_integrador.Localizaciones.Bosque, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Cuartel, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Lago, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Planicie, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.SectorUrbano, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.SitioDeReciclaje, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.TerrenoBaldio, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.Vertedero, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TP_integrador.Localizaciones.VertederoElectronico, TP integrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+    ]
+  }
+}
