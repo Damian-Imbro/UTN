@@ -86,9 +86,103 @@ namespace TP_integrador.Operadores
         public int CalcularDistancia(Tuple<int, int> nuevasCoordenadas)
         {
             int distancia = 0;
-            //Calcula la distancia hasta unas coordenadas en específico
+            int distanciaLineal = DistanciaLineal(CoordenadasEnElMapa, nuevasCoordenadas);
+
+
+
+
+
             return distancia;
         }
+
+        private int DistanciaLineal(Tuple<int, int> punto1, Tuple<int, int> punto2)
+        {
+            return Math.Abs(punto1.Item1 - punto2.Item1) + Math.Abs(punto1.Item2 - punto2.Item2);
+        }
+
+        
+        private List<(int, int)> Vecinos((int, int) punto, int[,] matriz)
+        {
+            int filas = matriz.GetLength(0);
+            int columnas = matriz.GetLength(1);
+            int[][] movimientos = { new[] { 0, 1 }, new[] { 1, 0 }, new[] { 0, -1 }, new[] { -1, 0 } }; 
+            List<(int, int)> result = new List<(int, int)>();
+
+            foreach (var movimiento in movimientos)
+            {
+                int nuevoX = punto.Item1 + movimiento[0];
+                int nuevoY = punto.Item2 + movimiento[1];
+
+                if (nuevoX >= 0 && nuevoX < filas && nuevoY >= 0 && nuevoY < columnas && matriz[nuevoX, nuevoY] == 0)
+                /*nuevoX >= 0: Garantiza que el nuevo valor de la coordenada X no sea menor que cero, es decir, que no se salga del límite izquierdo de la matriz.
+                nuevoX < filas: Asegura que el nuevo valor de la coordenada X no sea mayor o igual al número de filas de la matriz, evitando salirse del límite derecho.
+                nuevoY >= 0: Similar al punto 1, pero para la coordenada Y.
+                nuevoY < columnas: Similar al punto 2, pero para la coordenada Y.
+                matriz[nuevoX, nuevoY] == 0: Verifica que el valor en la nueva posición de la matriz sea igual a cero, indicando que la celda está libre y no hay un obstáculo.
+                Faltaría la manera de reemplazar matriz[nuevoX, nuevoY] == 0 por una función que evalúe el tipo de terreno y el tipo de operador y saber si puede pasar por ahí
+                */
+
+                {
+                    result.Add((nuevoX, nuevoY));
+                }
+            }
+
+            return result;
+        }
+        public class PriorityQueue<T> where T : IComparable<T>
+        {
+            private List<T> data;
+
+            public PriorityQueue()
+            {
+                this.data = new List<T>();
+            }
+
+            public void Enqueue(T item)
+            {
+                data.Add(item);
+                int indiceHijo = data.Count - 1;
+                while (indiceHijo > 0)
+                {
+                    int indicePadre = (indiceHijo - 1) / 2;
+                    if (data[indiceHijo].CompareTo(data[indicePadre]) >= 0)
+                        break;
+                    T temporal = data[indiceHijo]; 
+                    data[indiceHijo] = data[indicePadre]; 
+                    data[indicePadre] = temporal;
+                    indiceHijo = indicePadre;
+                }
+            }
+
+            public T Dequeue()
+            {
+                int ultimoIndice = data.Count - 1;
+                T primerElemento = data[0];
+                data[0] = data[ultimoIndice];
+                data.RemoveAt(ultimoIndice);
+
+                --ultimoIndice;
+                int indicePadre = 0;
+                while (ultimoIndice > 0)
+                {
+                    int indiceHijoIzquierdo = indicePadre * 2 + 1;
+                    if (indiceHijoIzquierdo > ultimoIndice)
+                        break;
+                    int indiceHijoDerecho = indiceHijoIzquierdo + 1;
+                    if (indiceHijoDerecho <= ultimoIndice && data[indiceHijoDerecho].CompareTo(data[indiceHijoIzquierdo]) < 0)
+                        indiceHijoIzquierdo = indiceHijoDerecho;
+                    if (data[indicePadre].CompareTo(data[indiceHijoIzquierdo]) <= 0)
+                        break;
+                    T temporal = data[indicePadre]; data[indicePadre] = data[indiceHijoIzquierdo]; data[indiceHijoIzquierdo] = temporal;
+                    indicePadre = indiceHijoIzquierdo;
+                }
+                return primerElemento;
+            }
+
+            
+        }
+
+
 
         public void TransferirCargaFisica(Operador operadorDestino, int carga)
         {   try
